@@ -1,14 +1,14 @@
-import NextButton from "../components/inputs/Button";
+import Sentence from "../../molecules/Sentence";
+import Instructions from "../../molecules/Instructions";
 import "./_style.scss";
 
 function App() {
   return (
     <div className="container">
-      <div className="sentence"></div>
-      <div className="message"></div>
+      <Sentence />
+      <Instructions />
       <div className="score"></div>
       <div className="keypad"></div>
-      <NextButton name={"Next"} />
     </div>
   );
 }
