@@ -1,11 +1,18 @@
 import Span from "../../atoms/Span";
+import Div from "../../atoms/Div";
+import "./_style.scss";
 
 function Instructions() {
   return (
-    <div>
-      <Span sentence={"Guess the sentence! Starting typing"} />
-      <Span sentence={"The yellow block are meant for spaces"} />
-    </div>
+    <Div
+      key="father"
+      class="instructions"
+      content={[
+        <Span key="i1" sentence="Guess the sentence! Starting typing" />,
+        <br key="br1" />,
+        <Span key="i2" sentence="The yellow block are meant for spaces" />,
+      ]}
+    />
   );
 }
 

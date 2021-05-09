@@ -1,10 +1,10 @@
-import "./_style.scss";
-
 function Button(props) {
   return (
-    <input type={props.type} className="nextButton">
-      {props.name}
-    </input>
+    <input
+      type={props.type}
+      className={props.class}
+      defaultValue={props.text}
+    />
   );
 }
 

@@ -1,8 +1,6 @@
-import "./_style.scss";
-
 function Span(props) {
   return (
-    <span className="">
+    <span>
       {props.sentence}
     </span>
   );
