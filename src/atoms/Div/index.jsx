@@ -1,16 +1,17 @@
-function Div(props) {
-  // console.log(props)
+import { forwardRef } from "react";
+
+const Div = forwardRef((props, ref) => {
+  console.log(props.ref)
   return (
     <div
-      onKeyDown={props.keyDown}
+      // onKeyDown={props.keyDown}
       suppressContentEditableWarning={true}
       className={props.class}
       contentEditable={props.contentEdit ? props.contentEdit : "false"}
-      tabIndex={props.tabIndex ? props.tabIndex : -1}
     >
       {props.content}
     </div>
   );
-}
+});
 
 export default Div;

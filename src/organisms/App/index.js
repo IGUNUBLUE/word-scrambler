@@ -18,13 +18,21 @@ function App() {
     getData(1).then((res) => setSentence({ text: res, number: 1 }));
   }, []);
 
+  function handleGetData(n) {
+    getData(n).then((res) => setSentence({ text: res, number: n }));
+  }
+
   return (
     <div className="container">
       <Sentences sentence={sentence.text} />
       <Instructions />
       <Score number={sentence.number} />
-      <Keyboard sentence={ sentence.text}/>
-      <Next />
+      <Keyboard
+        sentence={sentence.text}
+        getData={handleGetData}
+        number={sentence.number}
+      />
+      <Next getData={handleGetData} number={sentence.number}/>
     </div>
   );
 }
