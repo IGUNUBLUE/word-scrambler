@@ -5,7 +5,6 @@ import "./_style.scss";
 function Instructions() {
   return (
     <Div
-      key="father"
       class="instructions"
       content={[
         <Span key="i1" sentence="Guess the sentence! Starting typing" />,

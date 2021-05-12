@@ -1,8 +1,14 @@
+import useKey from "@accessible/use-key";
+
 import Button from "../../atoms/Button";
 import Div from "../../atoms/Div";
 import "./_style.scss";
 
 function Next(props) {
+  useKey(window, {
+    Enter: (event) => props.getData(props.number + 1),
+  });
+
   return (
     <Div
       class="nextContainer"
@@ -11,8 +17,6 @@ function Next(props) {
           type="button"
           text="Next"
           class="next"
-          click={props.getData}
-          number={props.number}
         />
       }
     />

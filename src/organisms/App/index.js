@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import getData from "../../API/getData";
 
+import getData from "../../API/getData";
 import Sentences from "../../molecules/Sentences";
 import Instructions from "../../molecules/Instructions";
 import Score from "../../molecules/Score";
@@ -8,8 +8,8 @@ import Keyboard from "../../molecules/Keyboard";
 import Next from "../../molecules/Next";
 import "./_style.scss";
 
-// My intention with the comments is to make it as clear as possible.
-// Apologies for leaving my code above without comment.
+// My intention with the comments is to explain a little.
+// This was a challenge for me! I learned a lot of new things ... thank you for your advices...!!
 
 function App() {
   const [sentence, setSentence] = useState({});
@@ -27,12 +27,8 @@ function App() {
       <Sentences sentence={sentence.text} />
       <Instructions />
       <Score number={sentence.number} />
-      <Keyboard
-        sentence={sentence.text}
-        getData={handleGetData}
-        number={sentence.number}
-      />
-      <Next getData={handleGetData} number={sentence.number}/>
+      <Keyboard sentence={sentence.text} />
+      <Next getData={handleGetData} number={sentence.number} />
     </div>
   );
 }
