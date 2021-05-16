@@ -3,7 +3,7 @@ function Button(props) {
     <input
       type={props.type}
       className={props.class}
-      defaultValue={props.text}
+      value={props.text}
     />
   );
 }

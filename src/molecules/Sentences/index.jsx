@@ -1,13 +1,16 @@
+import { useSelector } from "react-redux";
+
 import Span from "../../atoms/Span";
 import Div from "../../atoms/Div";
 import "./_style.scss";
 
 function Sentences(props) {
+  const sentence = useSelector((state) => state.sentence);
   let randomize = "";
 
-  if (props.sentence) {
+  if (sentence.text) {
     // Dividing the sentence into words
-    let words = props.sentence.split(" ");
+    let words = sentence.text.toLowerCase().split(" ");
     // Scramble
     randomize = words
       .map((word) => {
@@ -37,7 +40,7 @@ function Sentences(props) {
       class="sentences"
       content={
         <Span
-          sentence={props.sentence ? randomize : "Please, wait a sentence..."}
+          sentence={sentence.text ? randomize : "Please, wait a sentence..."}
         />
       }
     />

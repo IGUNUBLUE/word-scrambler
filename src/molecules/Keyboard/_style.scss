@@ -1,5 +1,6 @@
 $font: 'Open Sans';
 $font-size: 28px;
+$whiteColor: #ffffff;
 
 .keyboard-body {
   display: flex;
@@ -28,31 +29,51 @@ $font-size: 28px;
 .empty {
   font-family: $font;
   font-size: $font-size;
-  color: #e1e1e1;
+  color: $whiteColor;
   background-color: #e1e1e1;
   border: 0px;
   &:focus {
-    outline-color: #0048a9;
+    outline: none;
   }
 }
 
 .correct {
   font-family: $font;
   font-size: $font-size;
-  color: #ffffff;
+  color: $whiteColor;
   background-color: #4caf50;
+  border: 0px;
   &:focus {
     outline: none;
-    border: 0;
   }
 }
 
 .space {
   font-family: $font;
   font-size: $font-size;
+  color: $whiteColor;
   background-color: #ffb74d;
   border: 0px;
   &:focus {
-    outline-color: #0048a9;
+    outline: none;
   }
+}
+
+.nextContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 5px;
+}
+
+.next {
+  color: $whiteColor;
+  height: 40px;
+  width: 90px;
+  border: 0px;
+  background-color: #388e3c;
+  font-size: 20px;
+  border-radius: 6px;
+  
 }

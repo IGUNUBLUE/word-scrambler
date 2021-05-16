@@ -8,7 +8,6 @@ function Instructions() {
       class="instructions"
       content={[
         <Span key="i1" sentence="Guess the sentence! Starting typing" />,
-        <br key="br1" />,
         <Span key="i2" sentence="The yellow block are meant for spaces" />,
       ]}
     />
